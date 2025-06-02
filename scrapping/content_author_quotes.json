@@ -1,0 +1,141 @@
+{
+    "Hatta": {
+        "intents": [
+            {
+                "tag": "nationalism",
+                "input": [
+                    "berikan kutipan tentang nationalism",
+                    "quotes mengenai nationalism",
+                    "nationalism quotes"
+                ],
+                "responses": [
+                    "Hanya ada satu negara yang pantas menjadi negaraku. Ia tumbuh dengan perbuatan dan perbuatan itu adalah perbuatanku."
+                ]
+            },
+            {
+                "tag": "revolution",
+                "input": [
+                    "berikan kutipan tentang revolution",
+                    "quotes mengenai revolution",
+                    "revolution quotes"
+                ],
+                "responses": [
+                    "Salah besar orang yang mengatakan revolusi kita belum selesai. Revolusi adalah letusan masyarakat sekonyong-konyong yang melaksanakanUmwertung aller Werte(penilaian kembali atas semua nilai). Revolusi mengguncang lantai dan sendi; pasak dan tiang longgar semuanya. Sebab itu saat revolusi tidak dapat berlaku terlalu lama, tidak lebih dari beberapa minggu, atau beberapa bulan. Sesudah itu harus dibendung, datang masa konsolidasi untuk merealisasi hasil daripada revolusi itu. Yang belum selesai bukanlah revolusi itu, melainkan usaha menyelenggarakan cita-citanya di dalam waktu, setelah fundamen dibentangkan."
+                ]
+            },
+            {
+                "tag": "independence",
+                "input": [
+                    "berikan kutipan tentang independence",
+                    "quotes mengenai independence",
+                    "independence quotes"
+                ],
+                "responses": [
+                    "Aku rela di penjara asalkan bersama buku, karena dengan buku aku bebas.",
+                    "Partai adalah alat publik untuk menyampaikan aspirasi politiknya karena itu sejauh tetap memperjuangkan kemerdekaan dan menjamin keamanan, pemerintah menyukai timbulnya partai-partai politik, karena dengan adanya partai-partai itulah dipimpin ke jalan yang teratur segala aliran paham yang ada di masyarakat."
+                ]
+            },
+            {
+                "tag": "unity",
+                "input": [
+                    "berikan kutipan tentang unity",
+                    "quotes mengenai unity",
+                    "unity quotes"
+                ],
+                "responses": [
+                    "Apa yang dikatakan persatuan (oleh Soekarno) sebenarnya tak lain dari per-sate-an. Daging kerbau, daging sapi, dan daging kambing disate jadi satu. Persatuan segala golongan ini sama artinya dengan mengorbankan asas masing-masing."
+                ]
+            },
+            {
+                "tag": "international",
+                "input": [
+                    "berikan kutipan tentang international",
+                    "quotes mengenai international",
+                    "international quotes"
+                ],
+                "responses": [
+                    "Siapa yang hidup dalam dunia pikiran, dapat melepaskan dirinya daripada gangguan hidup sehari-hari"
+                ]
+            }
+        ]
+    },
+    "Soekarno": {
+        "intents": [
+            {
+                "tag": "nationalism",
+                "input": [
+                    "berikan kutipan tentang nationalism",
+                    "quotes mengenai nationalism",
+                    "nationalism quotes"
+                ],
+                "responses": [
+                    "Kami menggoyangkan langit, menggempakan darat, dan menggelorakan samudera agar tidak jadi bangsa yang hidup hanya dari 2 ½ sen sehari. Bangsa yang kerja keras, bukan bangsa tempe, bukan bangsa kuli. Bangsa yang rela menderita demi pembelian cita-cita",
+                    "Bangsa yang besar adalah bangsa yang menghargai jasa pahlawannya.",
+                    "Kalau perempuan itu baik, maka jayalah negara. Tetapi kalau perempuan itu buruk, maka runtuhlah negara",
+                    "Dalam tahun 1882 Ernest Renan telah membuka pendapatnja tentang faham \"bangsa\" itu. \"Bangsa\" itu menurut pudjangga ini ada suatu njawa, suatu azas-akal, jang terdjadi dari dua hal: pertama-tama rakjat itu dulunja harus bersama-sama mendjalani suatu riwayat; kedua rakjat itu sekarang harus mempunjai kemauan, keinginan hidup mendjadi satu. Bukannja djenis (ras), bukannja pula batas-batas negeri jang mendjadikan \"bangsa\" itu.",
+                    "Nasionalisme itu jalah suatu itikad; suatu keinsyafan rakjat bahwa rakjat itu ada satu golongan, satu \"bangsa\"!",
+                    "Bangsa itu adalah suatu persatuan perangai jang terdjadi dari persatuan hal-ichwal jang telah didjalani oleh rakjat itu.",
+                    "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\" Halaman 335 naskah sarinah"
+                ]
+            },
+            {
+                "tag": "revolution",
+                "input": [
+                    "berikan kutipan tentang revolution",
+                    "quotes mengenai revolution",
+                    "revolution quotes"
+                ],
+                "responses": [
+                    "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\" Halaman 335 naskah sarinah"
+                ]
+            },
+            {
+                "tag": "independence",
+                "input": [
+                    "berikan kutipan tentang independence",
+                    "quotes mengenai independence",
+                    "independence quotes"
+                ],
+                "responses": [
+                    "Bahwa jang menjebabkan kolonisasi itu bukanlah keinginan pada kemasjhuran, bukan keinginan melihat dunia-asing, bukan keinginan merdeka, dan bukan pula oleh karena negeri rakjat jang mendjalankan kolonisasi itu ada terlampau sesak oleh banjaknja penduduk, sebagai jang telah diadjarkan oleh Gustav Klemm, akan tetapi asalnja kolonisasi ijalah teristimewa soal rezeki.",
+                    "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\" Halaman 335 naskah sarinah",
+                    "Juga diatas pundak wanitalah terletak kewajiban untuk tidak ketinggalan di dalam perjuangan ini, dalam mana diperjuangkan kemerdekaan mereka dan pembebasan mereka. Mereka sendirilah harus membuktikan, bahwa mereka mengerti benar-benar tempat mereka dalam perjuangan sekarang yang mengejar masa depan yang lebih baik itu\" Halaman 332 Naskah sarinah"
+                ]
+            },
+            {
+                "tag": "unity",
+                "input": [
+                    "berikan kutipan tentang unity",
+                    "quotes mengenai unity",
+                    "unity quotes"
+                ],
+                "responses": [
+                    "Bangsa itu adalah suatu persatuan perangai jang terdjadi dari persatuan hal-ichwal jang telah didjalani oleh rakjat itu."
+                ]
+            },
+            {
+                "tag": "international",
+                "input": [
+                    "berikan kutipan tentang international",
+                    "quotes mengenai international",
+                    "international quotes"
+                ],
+                "responses": [
+                    "Bahwa jang menjebabkan kolonisasi itu bukanlah keinginan pada kemasjhuran, bukan keinginan melihat dunia-asing, bukan keinginan merdeka, dan bukan pula oleh karena negeri rakjat jang mendjalankan kolonisasi itu ada terlampau sesak oleh banjaknja penduduk, sebagai jang telah diadjarkan oleh Gustav Klemm, akan tetapi asalnja kolonisasi ijalah teristimewa soal rezeki."
+                ]
+            },
+            {
+                "tag": "struggle",
+                "input": [
+                    "berikan kutipan tentang struggle",
+                    "quotes mengenai struggle",
+                    "struggle quotes"
+                ],
+                "responses": [
+                    "Juga diatas pundak wanitalah terletak kewajiban untuk tidak ketinggalan di dalam perjuangan ini, dalam mana diperjuangkan kemerdekaan mereka dan pembebasan mereka. Mereka sendirilah harus membuktikan, bahwa mereka mengerti benar-benar tempat mereka dalam perjuangan sekarang yang mengejar masa depan yang lebih baik itu\" Halaman 332 Naskah sarinah",
+                    "Dan kamu, kaum wanita Indonesia,-akhirnya nasibmu adalah di tangan kamu sendiri. Saya memberi peringatan kepada kaum laku-laki itu untuk memberi keyakinan kepada mereka tentang hargamu dalam perjuangan, tetapi kamu sendiri harus menjadi sadar, kamu sendiri harus terjun mutlak dalam perjuangan\" Halaman 326 Naskah sarinah"
+                ]
+            }
+        ]
+    }
+}

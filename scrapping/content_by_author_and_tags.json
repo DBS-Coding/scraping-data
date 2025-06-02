@@ -6,10 +6,15 @@
                 "input": [
                     "berikan kutipan tentang nationalism",
                     "quotes mengenai nationalism",
-                    "nationalism quotes"
+                    "nationalism quotes",
+                    "nasionalisme",
+                    "quotes nasionalisme"
                 ],
                 "responses": [
-                    "Hanya ada satu negara yang pantas menjadi negaraku. Ia tumbuh dengan perbuatan dan perbuatan itu adalah perbuatanku."
+                    "Hanya ada satu negara yang pantas menjadi negaraku. Ia tumbuh dengan perbuatan dan perbuatan itu adalah perbuatanku.",
+                    "Nasionalisme itu adalah suatu itikad; suatu keinsyafan rakjat bahwa rakjat itu ada satu golongan, satu \"bangsa\"!",
+                    "Pahlawan yang setia itu berkorban, bukan buat dikenal namanya, tetapi semata-mata membela cita-citanya"
+
                 ]
             },
             {
@@ -29,11 +34,19 @@
                 "input": [
                     "berikan kutipan tentang independence",
                     "quotes mengenai independence",
-                    "independence quotes"
+                    "independence quotes",
+                    "kemerdekaan",
+                    "merdeka",
+                    "pendapat tentang kemerdekaan",
+                    "pendapat tentang merdeka",
+                    "apa itu kemerdekaan"
                 ],
                 "responses": [
                     "Aku rela di penjara asalkan bersama buku, karena dengan buku aku bebas.",
-                    "Partai adalah alat publik untuk menyampaikan aspirasi politiknya karena itu sejauh tetap memperjuangkan kemerdekaan dan menjamin keamanan, pemerintah menyukai timbulnya partai-partai politik, karena dengan adanya partai-partai itulah dipimpin ke jalan yang teratur segala aliran paham yang ada di masyarakat."
+                    "Partai adalah alat publik untuk menyampaikan aspirasi politiknya karena itu sejauh tetap memperjuangkan kemerdekaan dan menjamin keamanan, pemerintah menyukai timbulnya partai-partai politik, karena dengan adanya partai-partai itulah dipimpin ke jalan yang teratur segala aliran paham yang ada di masyarakat.",
+                    "Kemerdekaan itu adalah hak segala bangsa, dan oleh sebab itu penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan peri kemanusiaan dan peri keadilan.",
+                    "Kita merdeka tetapi perjuangan kita masih belum selesai. Selama Hukum Dasar kita belum terlaksanakan dengan baik, selama kita belum mempunyai pemerintahan yang benar-benar demokratis, selama kita belum mempunyai ekonomi yang kuat, selama kita belum mempunyai pendidikan yang baik, selama itu pula perjuangan kita belum selesai.",
+                    "Indonesia merdeka bukan tujuan akhir kita. Indonesia merdeka hanya syarat untuk bisa mencapai kebahagiaan dan kemakmuran rakyat."
                 ]
             },
             {
@@ -44,7 +57,10 @@
                     "partai politik"
                 ],
                 "responses": [
-                    "Partai adalah alat publik untuk menyampaikan aspirasi politiknya karena itu sejauh tetap memperjuangkan kemerdekaan dan menjamin keamanan, pemerintah menyukai timbulnya partai-partai politik, karena dengan adanya partai-partai itulah dipimpin ke jalan yang teratur segala aliran paham yang ada di masyarakat."
+                    "Partai adalah alat publik untuk menyampaikan aspirasi politiknya karena itu sejauh tetap memperjuangkan kemerdekaan dan menjamin keamanan, pemerintah menyukai timbulnya partai-partai politik, karena dengan adanya partai-partai itulah dipimpin ke jalan yang teratur segala aliran paham yang ada di masyarakat.",
+                    "Jika partai tidak menjalankan kaderisasi, maka anggota partai hanya akan menjadi “pembebek” keinginan pimpinannya. Kebiasaan membebek itu tiada memperkuat pergerakan. Bahkan, itu akan membunuh pergerakan",
+                    "Partai adalah alat publik untuk menyampaikan aspirasi politiknya karena itu sejauh tetap memperjuangkan kemerdekaan dan menjamin keamanan",
+                    "Partai politik bertujuan untuk mudah dapat mengukur kekuatan perjuangan dan untuk mempermudah meminta tanggung jawab kepada pemimpin-pemimpin barisan perjuangan"
                 ]
             },
             {
@@ -52,10 +68,16 @@
                 "input": [
                     "berikan kutipan tentang unity",
                     "quotes mengenai unity",
-                    "unity quotes"
+                    "unity quotes",
+                    "persatuan",
+                    "persatuan bangsa"
                 ],
                 "responses": [
-                    "Apa yang dikatakan persatuan (oleh Soekarno) sebenarnya tak lain dari per-sate-an. Daging kerbau, daging sapi, dan daging kambing disate jadi satu. Persatuan segala golongan ini sama artinya dengan mengorbankan asas masing-masing."
+                    "Apa yang dikatakan persatuan (oleh Soekarno) sebenarnya tak lain dari per-sate-an. Daging kerbau, daging sapi, dan daging kambing disate jadi satu. Persatuan segala golongan ini sama artinya dengan mengorbankan asas masing-masing.",
+                    "Persatuan Indonesia, bukan sekadar kata-kata, tapi juga tindakan,",
+                    "Persatuan segala golongan ini sama artinya dengan mengorbankan asas masing-masing.",
+                    "Agar persatuan dan kepedulian tak semakin pudar, teruslah menjunjung tinggi sila ketiga Pancasila, Persatuan Indonesia.",
+                    "Jatuh bangunnya negara ini, sangat tergantung dari bangsa ini sendiri. Makin pudar persatuan dan kepedulian, Indonesia hanyalah sekadar nama dan gambar seuntaian pulau di peta."
                 ]
             },
             {
@@ -83,7 +105,10 @@
                 ],
                 "responses": [
                     "Saya tidak dapat bekerja sama dengan Presiden Soekarno lagi, karena beliau tidak mau dibatasi oleh konstitusi.",
-                    "Saya tidak dapat menyetujui sistem demokrasi terpimpin sebagaimana yang dijalankan oleh Presiden Soekarno. Demokrasi terpimpin itu pada hakekatnya adalah kediktatoran yang dibungkus dengan selubung demokrasi. Dalam sistem itu, rakyat tidak lagi mempunyai kedaulatan, sebab kedaulatan itu telah berpindah ke tangan pemimpin."
+                    "Saya tidak dapat menyetujui sistem demokrasi terpimpin sebagaimana yang dijalankan oleh Presiden Soekarno. Demokrasi terpimpin itu pada hakekatnya adalah kediktatoran yang dibungkus dengan selubung demokrasi. Dalam sistem itu, rakyat tidak lagi mempunyai kedaulatan, sebab kedaulatan itu telah berpindah ke tangan pemimpin.",
+                    "Sistem yang dilahirkan Soekarno tidak akan lebih panjang umurnya dari Soekarno sendiri.",
+                    "Apa yang dikatakan persatuan (oleh Soekarno) sebenarnya tak lain dari per-sate-an.",
+                    "Tetap neofeodalisme Soekarno lebih jahat dan lebih ganas."
                 ]
             },
             {
@@ -108,6 +133,23 @@
                 "responses": [
                     "Kemajuan dari suatu negara adalah kemajuan pendidikan dari sekolah dan kemajuan kesehatan dari rumah sakit."
                 ]
+            },
+            {
+                "tag": "struggle",
+                "input": [
+                    "berikan kutipan tentang struggle",
+                    "quotes mengenai struggle",
+                    "struggle quotes",
+                    "perjuangan",
+                    "perjuangan bangsa",
+                    "perjuangan kemerdekaan"
+                ],
+                "responses": [
+                    "Perjuangan kita belum selesai, perjuangan kita baru dimulai. Kita harus terus berjuang untuk mencapai cita-cita kemerdekaan yang sejati.",
+                    "Perjuangan itu tidak hanya untuk diri sendiri, tetapi juga untuk bangsa dan negara. Kita harus berjuang untuk mewujudkan cita-cita kemerdekaan yang sejati.",
+                    "Apa pun yang membuatmu takut, hadapilah dengan berani",
+                    "Biarlah pengalaman masa lalu kita menjadi tonggak petunjuk, dan bukan tonggak yang membelenggu kita"
+                ]
             }
         ]
     },
@@ -130,7 +172,10 @@
                     "Bangsa yang besar adalah bangsa yang menghargai jasa pahlawannya.",
                     "Dalam tahun 1882 Ernest Renan telah membuka pendapatnja tentang faham \"bangsa\" itu. \"Bangsa\" itu menurut pudjangga ini ada suatu nyawa, suatu asas-akal, yang terjadi dari dua hal: pertama-tama rakyat itu dulunya harus bersama-sama menjalani suatu riwayat; kedua rakyat itu sekarang harus mempunyai kemauan, keinginan hidup menjadi satu. Bukannya jenis (ras), bukannya pula batas-batas negeri yang menjadikan \"bangsa\" itu.",
                     "Nasionalisme itu jalah suatu itikad; suatu keinsyafan rakjat bahwa rakjat itu ada satu golongan, satu \"bangsa\"!",
-                    "Nasionalis yang sejati, yang nasionalismenya itu bukan timbul semata-mata tiruan dari nasionalisme barat akan tetapi timbul dari rasa cinta akan manusia dan kemanusiaan"
+                    "Nasionalis yang sejati, yang nasionalismenya itu bukan timbul semata-mata tiruan dari nasionalisme barat akan tetapi timbul dari rasa cinta akan manusia dan kemanusiaan",
+                    "Kita masih terus berjuang jadi tuan rumah di negeri sendiri, tanyakan pada diri, 'apa yang sudah saya berikan untuk bangsa ini?",
+                    "Itulah konsep nasionalisme yang didirikan Indonesia. Bukan orang Jawa, bukan orang Sumatera, bukan orang Kalimantan, Sulawesi, Bali atau lainnya, tapi orang Indonesia, yang bersama-sama menjadi fondasi satu kesatuan nasional.” ",
+                    "Bangsa yang besar adalah bangsa yang menghormati jasa pahlawannya."
                ]
             },
             {
@@ -142,7 +187,8 @@
                 "responses": [
                     "Bangsa yang besar adalah bangsa yang menghargai jasa pahlawannya.",                    
                     "Dalam tahun 1882 Ernest Renan telah membuka pendapatnja tentang paham \"bangsa\" itu. \"Bangsa\" itu menurut pudjangga ini ada suatu njawa, suatu azas-akal, jang terdjadi dari dua hal: pertama-tama rakjat itu dulunja harus bersama-sama mendjalani suatu riwayat; kedua rakjat itu sekarang harus mempunjai kemauan, keinginan hidup mendjadi satu. Bukannja djenis (ras), bukannja pula batas-batas negeri jang mendjadikan \"bangsa\" itu.",
-                    "Bangsa itu adalah suatu persatuan perangai yang terjadi dari persatuan hal-ikhwal yang telah dijalani oleh rakyat itu."
+                    "Bangsa itu adalah suatu persatuan perangai yang terjadi dari persatuan hal-ikhwal yang telah dijalani oleh rakyat itu.",
+                    "Bangsa yang tidak percaya pada kekuatan dirinya sebagai suatu bangsa, tidak dapat berdiri sebagai suatu bangsa yang merdeka." 
             ]
             },
             {
@@ -150,10 +196,15 @@
                 "input": [
                     "kutipan soekarno tentang ideologi",
                     "ideologi menurut soekarno",
-                    "pendapat soekarno tentang ideologi"
+                    "pendapat soekarno tentang ideologi",
+                    "ideologi soekarno"
                 ],
                 "responses": [
-                    "Saya menerima semua ideologi selama ideologi tersebut tidak merusak Indonesia"
+                    "Saya menerima semua ideologi selama ideologi tersebut tidak merusak Indonesia",
+                    "Pancasila adalah satu alat mempersatu, yang saya yakin seyakin-yakinnya bangsa Indonesia dari Sabang sampai ke Merauke hanyalah dapat bersatu padu di atas dasar Pancasila itu.",
+                    "Pancasila sebagai ideologi negara adalah sebuah berkah bagi bangsa Indonesia.",
+                    "Kita ingin mendirikan suatu negara, semua buat semua, bukan satu negara untuk satu orang, bukan satu negara untuk satu golongan, walaupun golongan kaya.",
+                    "Dengan panduan nilai-nilai Pancasila, Indonesia mampu bertahan, bersatu, dan melangkah maju di tengah deru ombak ideologi lain. Pancasila akan terus mengalir di denyut nadi seluruh rakyat Indonesia sampai akhir zaman."
                 ]
             },
 
@@ -162,12 +213,17 @@
                 "input": [
                     "berikan kutipan tentang revolution",
                     "quotes mengenai revolution",
-                    "revolution quotes"
+                    "revolution quotes",
+                    "apakah revolusi kita sudah selesai",
+                    "revolusi",
+                    "revolusi indonesia",
+                    "revolusi nasional",
+                    "revolusi sosial"
                 ],
                 "responses": [
                     "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\"",
-                    "Bahwa yang menyebabkan kolonisasi itu bukanlah keinginan pada kemasyhuran, bukan keinginan melihat dunia-asing, bukan keinginan merdeka, dan bukan pula oleh karena negeri rakyat yang menjalankan kolonisasi itu ada terlampau sesak oleh banyaknya penduduk, sebagai yang telah diajarkan oleh Gustav Klemm, akan tetapi asalnya kolonisasi ialah teristimewa soal rezeki."
-
+                    "Bahwa yang menyebabkan kolonisasi itu bukanlah keinginan pada kemasyhuran, bukan keinginan melihat dunia-asing, bukan keinginan merdeka, dan bukan pula oleh karena negeri rakyat yang menjalankan kolonisasi itu ada terlampau sesak oleh banyaknya penduduk, sebagai yang telah diajarkan oleh Gustav Klemm, akan tetapi asalnya kolonisasi ialah teristimewa soal rezeki.",
+                    "Revolusi hanya benar-benar revolusi jika ini adalah perjuangan terus-menerus – bukan hanya perjuangan eksternal melawan musuh, tapi perjuangan batin, berjuang dan menundukkan semua aspek negatif yang menghambat atau merusak jalannya revolusi. Dalam pencerahan ini, revolusi adalah … sebuah simfoni kemenangan atas musuh dan diri sendiri."
                 ]
             },
             {
@@ -177,12 +233,18 @@
                     "quotes mengenai independence",
                     "independence quotes",
                     "kemerdekaan",
-                    "merdeka"
+                    "merdeka",
+                    "pendapat tentang kemerdekaan",
+                    "pendapat soekarno tentang kemerdekaan",
+                    "apa itu kemerdekaan"
                 ],
                 "responses": [                   
                     "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\"",
                     "Juga diatas pundak wanitalah terletak kewajiban untuk tidak ketinggalan di dalam perjuangan ini, dalam mana diperjuangkan kemerdekaan mereka dan pembebasan mereka. Mereka sendirilah harus membuktikan, bahwa mereka mengerti benar-benar tempat mereka dalam perjuangan sekarang yang mengejar masa depan yang lebih baik itu\"",
-                    "Kemerdekaan ialah hak segala bangsa, dan oleh sebab itu penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan peri kemanusiaan dan peri keadilan."
+                    "Kemerdekaan ialah hak segala bangsa, dan oleh sebab itu penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan peri kemanusiaan dan peri keadilan.",
+                    "Merdeka hanyalah sebuah jembatan, Walaupun jembatan emas, di seberang jembatan itu jalan pecah dua: satu ke dunia sama rata sama rasa, satu ke dunia sama ratap sama tangis!",
+                    "Dalam pidatoku, 'Sekali Merdeka tetap Merdeka'! Ku cetus semboyan: Kita cinta damai, tetapi kita lebih cinta kemerdekaan.",
+                    "Aku tinggalkan kekayaan alam Indonesia, biar semua negara besar dunia iri dengan Indonesia, dan aku tinggalkan hingga bangsa Indonesia sendiri yang mengolahnya"
                 ]
             },
             {
@@ -201,11 +263,18 @@
                     "berikan kutipan tentang unity",
                     "quotes mengenai unity",
                     "unity quotes",
-                    "persatuan"
+                    "persatuan",
+                    "negara ini milik siapa",
+                    "persatuan bangsa",
+                    "persatuan indonesia",
+                    "persatuan indonesia quotes"
                 ],
                 "responses": [
-                    "Bangsa itu adalah suatu persatuan perangai yang terjadi dari persatuan hal-ikhwal yang telah dijalani oleh rakyat itu."
-                ]
+                    "Bangsa itu adalah suatu persatuan perangai yang terjadi dari persatuan hal-ikhwal yang telah dijalani oleh rakyat itu.",
+                    "Persatuan Indonesia, bukan sekadar kata-kata, tapi juga tindakan.",
+                    "Negara Republik Indonesia ini bukan milik sesuatu golongan, bukan milik sesuatu agama, bukan milik sesuatu suku, bukan milik sesuatu golongan adat-istiadat, tetapi milik kita semua dari Sabang sampai Merauke!"
+
+                ]  
             },
             {
                 "tag": "international",
