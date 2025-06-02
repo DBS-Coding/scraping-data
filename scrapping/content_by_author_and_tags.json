@@ -14,7 +14,6 @@
                     "Hanya ada satu negara yang pantas menjadi negaraku. Ia tumbuh dengan perbuatan dan perbuatan itu adalah perbuatanku.",
                     "Nasionalisme itu adalah suatu itikad; suatu keinsyafan rakjat bahwa rakjat itu ada satu golongan, satu \"bangsa\"!",
                     "Pahlawan yang setia itu berkorban, bukan buat dikenal namanya, tetapi semata-mata membela cita-citanya"
-
                 ]
             },
             {
@@ -86,7 +85,7 @@
                     "berikan kutipan tentang international",
                     "quotes mengenai international",
                     "international quotes",
-                    "dunia", 
+                    "dunia",
                     "dunia internasional"
                 ],
                 "responses": [
@@ -176,7 +175,7 @@
                     "Kita masih terus berjuang jadi tuan rumah di negeri sendiri, tanyakan pada diri, 'apa yang sudah saya berikan untuk bangsa ini?",
                     "Itulah konsep nasionalisme yang didirikan Indonesia. Bukan orang Jawa, bukan orang Sumatera, bukan orang Kalimantan, Sulawesi, Bali atau lainnya, tapi orang Indonesia, yang bersama-sama menjadi fondasi satu kesatuan nasional.” ",
                     "Bangsa yang besar adalah bangsa yang menghormati jasa pahlawannya."
-               ]
+                ]
             },
             {
                 "tag": "bangsa",
@@ -185,11 +184,11 @@
                     "bangsa"
                 ],
                 "responses": [
-                    "Bangsa yang besar adalah bangsa yang menghargai jasa pahlawannya.",                    
+                    "Bangsa yang besar adalah bangsa yang menghargai jasa pahlawannya.",
                     "Dalam tahun 1882 Ernest Renan telah membuka pendapatnja tentang paham \"bangsa\" itu. \"Bangsa\" itu menurut pudjangga ini ada suatu njawa, suatu azas-akal, jang terdjadi dari dua hal: pertama-tama rakjat itu dulunja harus bersama-sama mendjalani suatu riwayat; kedua rakjat itu sekarang harus mempunjai kemauan, keinginan hidup mendjadi satu. Bukannja djenis (ras), bukannja pula batas-batas negeri jang mendjadikan \"bangsa\" itu.",
                     "Bangsa itu adalah suatu persatuan perangai yang terjadi dari persatuan hal-ikhwal yang telah dijalani oleh rakyat itu.",
-                    "Bangsa yang tidak percaya pada kekuatan dirinya sebagai suatu bangsa, tidak dapat berdiri sebagai suatu bangsa yang merdeka." 
-            ]
+                    "Bangsa yang tidak percaya pada kekuatan dirinya sebagai suatu bangsa, tidak dapat berdiri sebagai suatu bangsa yang merdeka."
+                ]
             },
             {
                 "tag": "ideologies",
@@ -207,7 +206,6 @@
                     "Dengan panduan nilai-nilai Pancasila, Indonesia mampu bertahan, bersatu, dan melangkah maju di tengah deru ombak ideologi lain. Pancasila akan terus mengalir di denyut nadi seluruh rakyat Indonesia sampai akhir zaman."
                 ]
             },
-
             {
                 "tag": "revolution",
                 "input": [
@@ -238,7 +236,7 @@
                     "pendapat soekarno tentang kemerdekaan",
                     "apa itu kemerdekaan"
                 ],
-                "responses": [                   
+                "responses": [
                     "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\"",
                     "Juga diatas pundak wanitalah terletak kewajiban untuk tidak ketinggalan di dalam perjuangan ini, dalam mana diperjuangkan kemerdekaan mereka dan pembebasan mereka. Mereka sendirilah harus membuktikan, bahwa mereka mengerti benar-benar tempat mereka dalam perjuangan sekarang yang mengejar masa depan yang lebih baik itu\"",
                     "Kemerdekaan ialah hak segala bangsa, dan oleh sebab itu penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan peri kemanusiaan dan peri keadilan.",
@@ -273,8 +271,7 @@
                     "Bangsa itu adalah suatu persatuan perangai yang terjadi dari persatuan hal-ikhwal yang telah dijalani oleh rakyat itu.",
                     "Persatuan Indonesia, bukan sekadar kata-kata, tapi juga tindakan.",
                     "Negara Republik Indonesia ini bukan milik sesuatu golongan, bukan milik sesuatu agama, bukan milik sesuatu suku, bukan milik sesuatu golongan adat-istiadat, tetapi milik kita semua dari Sabang sampai Merauke!"
-
-                ]  
+                ]
             },
             {
                 "tag": "international",
@@ -302,8 +299,8 @@
                 "responses": [
                     "Juga diatas pundak wanitalah terletak kewajiban untuk tidak ketinggalan di dalam perjuangan ini, dalam mana diperjuangkan kemerdekaan mereka dan pembebasan mereka. Mereka sendirilah harus membuktikan, bahwa mereka mengerti benar-benar tempat mereka dalam perjuangan sekarang yang mengejar masa depan yang lebih baik itu\" ",
                     "Dan kamu, kaum wanita Indonesia,-akhirnya nasibmu adalah di tangan kamu sendiri. Saya memberi peringatan kepada kaum laku-laki itu untuk memberi keyakinan kepada mereka tentang hargamu dalam perjuangan, tetapi kamu sendiri harus menjadi sadar, kamu sendiri harus terjun mutlak dalam perjuangan\" ",
-                     "Belajar tanpa berpikir itu tidak berguna, tetapi berpikir tanpa belajar sangat berbahaya!",
-                     "Perjuanganku lebih mudah karena mengusir penjajah, tapi perjuanganmu akan lebih sulit karena melawan bangsamu sendiri."
+                    "Belajar tanpa berpikir itu tidak berguna, tetapi berpikir tanpa belajar sangat berbahaya!",
+                    "Perjuanganku lebih mudah karena mengusir penjajah, tapi perjuanganmu akan lebih sulit karena melawan bangsamu sendiri."
                 ]
             }
         ]

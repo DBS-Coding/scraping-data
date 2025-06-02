@@ -62,23 +62,6 @@
     "Soekarno": {
         "intents": [
             {
-                "tag": "nationalism",
-                "input": [
-                    "berikan kutipan tentang nationalism",
-                    "quotes mengenai nationalism",
-                    "nationalism quotes"
-                ],
-                "responses": [
-                    "Kami menggoyangkan langit, menggempakan darat, dan menggelorakan samudera agar tidak jadi bangsa yang hidup hanya dari 2 ½ sen sehari. Bangsa yang kerja keras, bukan bangsa tempe, bukan bangsa kuli. Bangsa yang rela menderita demi pembelian cita-cita",
-                    "Bangsa yang besar adalah bangsa yang menghargai jasa pahlawannya.",
-                    "Kalau perempuan itu baik, maka jayalah negara. Tetapi kalau perempuan itu buruk, maka runtuhlah negara",
-                    "Dalam tahun 1882 Ernest Renan telah membuka pendapatnja tentang faham \"bangsa\" itu. \"Bangsa\" itu menurut pudjangga ini ada suatu njawa, suatu azas-akal, jang terdjadi dari dua hal: pertama-tama rakjat itu dulunja harus bersama-sama mendjalani suatu riwayat; kedua rakjat itu sekarang harus mempunjai kemauan, keinginan hidup mendjadi satu. Bukannja djenis (ras), bukannja pula batas-batas negeri jang mendjadikan \"bangsa\" itu.",
-                    "Nasionalisme itu jalah suatu itikad; suatu keinsyafan rakjat bahwa rakjat itu ada satu golongan, satu \"bangsa\"!",
-                    "Bangsa itu adalah suatu persatuan perangai jang terdjadi dari persatuan hal-ichwal jang telah didjalani oleh rakjat itu.",
-                    "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\" Halaman 335 naskah sarinah"
-                ]
-            },
-            {
                 "tag": "revolution",
                 "input": [
                     "berikan kutipan tentang revolution",
