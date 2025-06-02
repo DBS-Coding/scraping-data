@@ -1,0 +1,71 @@
+{
+    "intents": [
+        {
+            "tag": "quote_hatta",
+            "input": [
+                "kutipan hatta",
+                "quotes hatta",
+                "kata bijak hatta",
+                "pemikiran hatta",
+                "nasihat hatta"
+            ],
+            "responses": [
+                "I’d volunteer to go to prison, as long as there are books. Because with books I am free.",
+                "Aku rela di penjara asalkan bersama buku, karena dengan buku aku bebas.",
+                "Hanya ada satu negara yang pantas menjadi negaraku. Ia tumbuh dengan perbuatan dan perbuatan itu adalah perbuatanku.",
+                "Filosofi meluaskan pandangan serta mempertajam pikiran.",
+                "Demokrasi hanya berjalan kalau disertai rasa tanggung jawab. Tidak ada demokrasi tanpa tanggung jawab. Dan, demokrasi yang melewati batasnya dan meluap menjadi anarki akan menemui ajalnya dan digantikan sementara waktu oleh diktator.",
+                "Diktator yang bergantung pada kewibawaan orang seorang tak lama umurnya. Sebab itu pula, sistem yang dilahirkan Soekarno tidak akan lebih panjang umurnya dari Soekarno sendiri. Umur manusia terbatas. Apabila Soekarno sudah tidak ada lagi, maka sistemnya akan roboh seperti rumah kartu.",
+                "Siapa yang hidup dalam dunia pikiran, dapat melepaskan dirinya daripada gangguan hidup sehari-hari",
+                "Filosofi berguna untuk penerangkan pikiran dan penetapan hati. Ia membawa kita ke dalam alam pikiran, alam nurani semata-mata. Dan oleh karena itu melepaskan kita daripada pengaruh tempat dan waktu. Dalam pergaulan hidup, yang begitu menindas akan rohani, sebagai di tanah pembuangan Digul, keamanan perasaan itu perlu ada-",
+                "Apa yang dikatakan persatuan (oleh Soekarno) sebenarnya tak lain dari per-sate-an. Daging kerbau, daging sapi, dan daging kambing disate jadi satu. Persatuan segala golongan ini sama artinya dengan mengorbankan asas masing-masing.",
+                "Partai adalah alat publik untuk menyampaikan aspirasi politiknya karena itu sejauh tetap memperjuangkan kemerdekaan dan menjamin keamanan, pemerintah menyukai timbulnya partai-partai politik, karena dengan adanya partai-partai itulah dipimpin ke jalan yang teratur segala aliran paham yang ada di masyarakat.",
+                "Dalam jangka waktu lama, Indonesia hidup dalam bayangan feodalisme. Tetap neofeodalisme Soekarno lebih jahat dan lebih ganas.",
+                "Kebudayaan tidak dapat dipertahankan saja, kita harus berusaha merobah dan memajukan, oleh karena kebudayaan sebagai kultuur, sebagai barang yang tumbuh, dapat hilang dan bisa maju.",
+                "Kita selalu berkaok-kaok tentang sosialisme, tapi tindakan pemerintahan kebalikan dari itu. Harga bensin misalnya, dinaikkan sekaligus 62 kali lipat, tarif gas dan listrik melambung 20 kali, serta harga beras melompat-lompat tak terbeli.",
+                "Apa sebenarnya yang disebut filosofi, lebih baik jangan dipersoalkan pada permulaan menempuhnya. Akan hilang jalan nanti karena banyak ragam dan paham. Tiap-tiap ahli berlainan pendapatnya tentang apa yang dikatakan filosofi. Tiap-tiap filosofpun lain-lain pula tujuannya",
+                "Salah besar orang yang mengatakan revolusi kita belum selesai. Revolusi adalah letusan masyarakat sekonyong-konyong yang melaksanakanUmwertung aller Werte(penilaian kembali atas semua nilai). Revolusi mengguncang lantai dan sendi; pasak dan tiang longgar semuanya. Sebab itu saat revolusi tidak dapat berlaku terlalu lama, tidak lebih dari beberapa minggu, atau beberapa bulan. Sesudah itu harus dibendung, datang masa konsolidasi untuk merealisasi hasil daripada revolusi itu. Yang belum selesai bukanlah revolusi itu, melainkan usaha menyelenggarakan cita-citanya di dalam waktu, setelah fundamen dibentangkan.",
+                "Perkembangan politik yang berakhir dengan kekacauan, demokrasi yang berakhir dengan anarki membuka jalan untuk lawannya : diktator.",
+                "Demokrasi bisa ditindas sementara karena kesalahannya sendiri, tetap setelah ia mengalami cobaan yang pahit, ia akan muncul kembali dengan penuh keinsafan."
+            ]
+        },
+        {
+            "tag": "quote_soekarno",
+            "input": [
+                "kutipan soekarno",
+                "quotes soekarno",
+                "kata bijak soekarno",
+                "pemikiran soekarno",
+                "pidato soekarno",
+                "nasihat soekarno"
+            ],
+            "responses": [
+                "Kami menggoyangkan langit, menggempakan darat, dan menggelorakan samudera agar tidak jadi bangsa yang hidup hanya dari 2 ½ sen sehari. Bangsa yang kerja keras, bukan bangsa tempe, bukan bangsa kuli. Bangsa yang rela menderita demi pembelian cita-cita",
+                "This country, the Republic of Indonesia, does not belong to any group, nor to any religion, nor to any ethnic group, nor to any group with customs and traditions, but the property of all of us from Sabang to Merauke!",
+                "Bebek berjalan berbondong-bondong, akan tetapi burung elang terbang sendirian.",
+                "I hate imperialism. I detest colonialism. And I fear the consequences of their last bitter struggle for life. We are determined, that our nation, and the world as a whole, shall not be the play thing of one small corner of the world",
+                "Learning without thinking is useless, but thinking without learning is very dangerous!",
+                "Apa yang sudah disepakati secara politik, jangan pernah diperdebatkan secara estetis.",
+                "Apabila dalam diri seseorang masih ada rasa malu dan takut untuk berbuat suatu kebaikan, maka jaminan bagi orang tersebut adalah tidak akan bertemunya ia dengan kemajuan selangkah pun",
+                "Insinyur (Sarjana) yang bekerja pada orang lain itu (masuk dalam golongan) proletar. Karena ia menjual tenaganya (kepada orang lain) dan alat alat produksi yang dia gunakan untuk bekerja bukan menjadi hak miliknya.",
+                "Bangsa yang besar adalah bangsa yang menghargai jasa pahlawannya.",
+                "Nasionalis yang sedjati, jang nasionalismenya itu bukan timbul semata-mata suatu copie atau tiruan dari nasionalisme barat akan tetapi timbul dari rasa tjinta akan manusia dan kemanusiaan",
+                "l'exploitation de l'home par 'ihomme",
+                "Kalau perempuan itu baik, maka jayalah negara. Tetapi kalau perempuan itu buruk, maka runtuhlah negara",
+                "Dalam tahun 1882 Ernest Renan telah membuka pendapatnja tentang faham \"bangsa\" itu. \"Bangsa\" itu menurut pudjangga ini ada suatu njawa, suatu azas-akal, jang terdjadi dari dua hal: pertama-tama rakjat itu dulunja harus bersama-sama mendjalani suatu riwayat; kedua rakjat itu sekarang harus mempunjai kemauan, keinginan hidup mendjadi satu. Bukannja djenis (ras), bukannja pula batas-batas negeri jang mendjadikan \"bangsa\" itu.",
+                "Nasionalisme itu jalah suatu itikad; suatu keinsyafan rakjat bahwa rakjat itu ada satu golongan, satu \"bangsa\"!",
+                "Jang pertama-tama menjebabkan kolonisasi jalah selamanja kekurangan bekal-hidup dalam tanah-airnja sendiri, begitulah Dietrich Schafer berkata. Kekurangan rezeki, itulah jang mendjadi sebab rakjat-rakjat itu mendjajag negeri-negeri, dimana mereka bisa mendapat rezeki itu. Itulah pula jang membikin \"ontvoogding\"-nja negeri-negeri djadjahan oleh negeri-negeri jang mendjadjahnja itu, sebagai suatu barang jang sukar dipertjajainja. Orang tak akan gampang-gampang melepaskan bakul-nasinja, djika pelepasan bakul itu mendatangkan matinja!",
+                "Bangsa itu adalah suatu persatuan perangai jang terdjadi dari persatuan hal-ichwal jang telah didjalani oleh rakjat itu.",
+                "Jang mendatangkan pemberontakan-pemberontakan itu biasanja bagian-bagian jang terketjil, dan bagian-bagian jang terketjil sekali.",
+                "Aku telah memperhatikan, kalau engkau membelah dada seseorang (laki-laki) termasuk aku sendiri maka akan terbatja dalam dadanja itu bahwa kebahagiaan dalam perkawinan baru akan tertjapai apabila si isteri merupakan perpaduan dari pada seorang ibu, kekasih dan seorang kawan. Aku ingin di ibui oleh teman hidupku. Kalau aku pilek, aku ingin dipidjitnja. Kalau aku lapar, aku ingin memakan makanan jang dimasaknja sendiri. Manakala badjuku kojak, aku ingin isteriku menambalnja.",
+                "Bahwa jang menjebabkan kolonisasi itu bukanlah keinginan pada kemasjhuran, bukan keinginan melihat dunia-asing, bukan keinginan merdeka, dan bukan pula oleh karena negeri rakjat jang mendjalankan kolonisasi itu ada terlampau sesak oleh banjaknja penduduk, sebagai jang telah diadjarkan oleh Gustav Klemm, akan tetapi asalnja kolonisasi ijalah teristimewa soal rezeki.",
+                "...orang Bali mempunjai kepertjajaan... kalau gunung Agung meletus ini berarti bahwa rakjat telah melakukan maksiat.",
+                "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\" Halaman 335 naskah sarinah",
+                "Juga diatas pundak wanitalah terletak kewajiban untuk tidak ketinggalan di dalam perjuangan ini, dalam mana diperjuangkan kemerdekaan mereka dan pembebasan mereka. Mereka sendirilah harus membuktikan, bahwa mereka mengerti benar-benar tempat mereka dalam perjuangan sekarang yang mengejar masa depan yang lebih baik itu\" Halaman 332 Naskah sarinah",
+                "The motion picture industry has provided a window on the world, and the colonized nations have looked through that window and have seen the things of which they have been deprived. It is perhaps not generally realized that a refrigerator can be a revolutionary symbol—to a people who have no refrigerators. A motorcar owned by a worker in one country can be a symbol of revolt to a people deprived of even the necessities of life… [Hollywood] helped to build up the sense of deprivation of man’s birthright, and that sense of deprivation has played a large part in the national revolutions of postwar Asia",
+                "We must have a blueprint not only for a guided economy but for a social order based on justice and ensuring the well-being of the people.",
+                "Dan kamu, kaum wanita Indonesia,-akhirnya nasibmu adalah di tangan kamu sendiri. Saya memberi peringatan kepada kaum laku-laki itu untuk memberi keyakinan kepada mereka tentang hargamu dalam perjuangan, tetapi kamu sendiri harus menjadi sadar, kamu sendiri harus terjun mutlak dalam perjuangan\" Halaman 326 Naskah sarinah"
+            ]
+        }
+    ]
+}
