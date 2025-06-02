@@ -17,7 +17,8 @@
                 "input": [
                     "berikan kutipan tentang revolution",
                     "quotes mengenai revolution",
-                    "revolution quotes"
+                    "revolution quotes",
+                    "apakah revolusi kita sudah selesai"
                 ],
                 "responses": [
                     "Salah besar orang yang mengatakan revolusi kita belum selesai. Revolusi adalah letusan masyarakat sekonyong-konyong yang melaksanakanUmwertung aller Werte(penilaian kembali atas semua nilai). Revolusi mengguncang lantai dan sendi; pasak dan tiang longgar semuanya. Sebab itu saat revolusi tidak dapat berlaku terlalu lama, tidak lebih dari beberapa minggu, atau beberapa bulan. Sesudah itu harus dibendung, datang masa konsolidasi untuk merealisasi hasil daripada revolusi itu. Yang belum selesai bukanlah revolusi itu, melainkan usaha menyelenggarakan cita-citanya di dalam waktu, setelah fundamen dibentangkan."
@@ -32,6 +33,17 @@
                 ],
                 "responses": [
                     "Aku rela di penjara asalkan bersama buku, karena dengan buku aku bebas.",
+                    "Partai adalah alat publik untuk menyampaikan aspirasi politiknya karena itu sejauh tetap memperjuangkan kemerdekaan dan menjamin keamanan, pemerintah menyukai timbulnya partai-partai politik, karena dengan adanya partai-partai itulah dipimpin ke jalan yang teratur segala aliran paham yang ada di masyarakat."
+                ]
+            },
+            {
+                "tag": "partai",
+                "input": [
+                    "apa itu partai",
+                    "partai",
+                    "partai politik"
+                ],
+                "responses": [
                     "Partai adalah alat publik untuk menyampaikan aspirasi politiknya karena itu sejauh tetap memperjuangkan kemerdekaan dan menjamin keamanan, pemerintah menyukai timbulnya partai-partai politik, karena dengan adanya partai-partai itulah dipimpin ke jalan yang teratur segala aliran paham yang ada di masyarakat."
                 ]
             },
@@ -51,10 +63,50 @@
                 "input": [
                     "berikan kutipan tentang international",
                     "quotes mengenai international",
-                    "international quotes"
+                    "international quotes",
+                    "dunia", 
+                    "dunia internasional"
                 ],
                 "responses": [
-                    "Siapa yang hidup dalam dunia pikiran, dapat melepaskan dirinya daripada gangguan hidup sehari-hari"
+                    "Siapa yang hidup dalam dunia pikiran, dapat melepaskan dirinya daripada gangguan hidup sehari-hari",
+                    "Beri aku 10 pemuda, niscaya akan kuguncangkan dunia.",
+                    "Dunia ini adalah satu kesatuan, dan tidak ada satu bangsa pun yang dapat hidup sendiri. Kita harus saling membantu, saling mengerti, dan saling menghormati."
+                ]
+            },
+            {
+                "tag": "Soekarno",
+                "input": [
+                    "kutipan hatta tentang soekarno",
+                    "hatta dan soekarno",
+                    "kritik hatta terhadap soekarno",
+                    "kenapa anda berhenti bekerja sama dengan soekarno"
+                ],
+                "responses": [
+                    "Saya tidak dapat bekerja sama dengan Presiden Soekarno lagi, karena beliau tidak mau dibatasi oleh konstitusi.",
+                    "Saya tidak dapat menyetujui sistem demokrasi terpimpin sebagaimana yang dijalankan oleh Presiden Soekarno. Demokrasi terpimpin itu pada hakekatnya adalah kediktatoran yang dibungkus dengan selubung demokrasi. Dalam sistem itu, rakyat tidak lagi mempunyai kedaulatan, sebab kedaulatan itu telah berpindah ke tangan pemimpin."
+                ]
+            },
+            {
+                "tag": "demokrasi",
+                "input": [
+                    "kutipan hatta tentang demokrasi",
+                    "pendapat hatta tentang demokrasi",
+                    "demokrasi menurut hatta"
+                ],
+                "responses": [
+                    "Akhir-akhir ini, salam kemerdekaan mulai kita lupakan, karena kita telah melupakan makna sejati dari kemerdekaan itu sendiri. Salam tersebut perlahan menghilang karena kenyataannya, kita telah menyimpang dari apa yang kita proklamasikan. Oleh karena itu, kita harus menyelamatkan rakyat dari kekuasaan diktator. Sebab, jika ada diktator yang berhasil memakmurkan rakyat, maka kemakmuran itu hanya terbatas selama masa kekuasaan diktator tersebut.",
+                    "SEJARAH Indonesia sejak sepuluh tahun terakhir ini banyak memperlihatkan pertentangan antara idealisme dan realita. Idealisme, yang bertujuan menciptakan suatu pemerintahan yang adil, yang akan melaksanakan demokrasi yang sebaik-baiknya, dan kemakmuran yang sebesar-besarnya. Sementara realita saat ini, pemerintah yang dalam perkembangannya kelihatan semakin jauh dari demokrasi yang sebenarnya."
+                ]
+            },
+            {
+                "tag": "negara",
+                "input": [
+                    "kutipan hatta tentang negara",
+                    "negara menurut hatta",
+                    "pembangunan negara menurut hatta"
+                ],
+                "responses": [
+                    "Kemajuan dari suatu negara adalah kemajuan pendidikan dari sekolah dan kemajuan kesehatan dari rumah sakit."
                 ]
             }
         ]
@@ -66,18 +118,45 @@
                 "input": [
                     "berikan kutipan tentang nationalism",
                     "quotes mengenai nationalism",
-                    "nationalism quotes"
+                    "nationalism quotes",
+                    "apa itu bangsa",
+                    "mengapa bangsa kita besar",
+                    "mengapa kita harus nasionalis",
+                    "mengapa kita harus mencintai bangsa",
+                    "nasionalisme"
                 ],
                 "responses": [
                     "Kami menggoyangkan langit, menggempakan darat, dan menggelorakan samudera agar tidak jadi bangsa yang hidup hanya dari 2 ½ sen sehari. Bangsa yang kerja keras, bukan bangsa tempe, bukan bangsa kuli. Bangsa yang rela menderita demi pembelian cita-cita",
                     "Bangsa yang besar adalah bangsa yang menghargai jasa pahlawannya.",
-                    "Kalau perempuan itu baik, maka jayalah negara. Tetapi kalau perempuan itu buruk, maka runtuhlah negara",
-                    "Dalam tahun 1882 Ernest Renan telah membuka pendapatnja tentang faham \"bangsa\" itu. \"Bangsa\" itu menurut pudjangga ini ada suatu njawa, suatu azas-akal, jang terdjadi dari dua hal: pertama-tama rakjat itu dulunja harus bersama-sama mendjalani suatu riwayat; kedua rakjat itu sekarang harus mempunjai kemauan, keinginan hidup mendjadi satu. Bukannja djenis (ras), bukannja pula batas-batas negeri jang mendjadikan \"bangsa\" itu.",
+                    "Dalam tahun 1882 Ernest Renan telah membuka pendapatnja tentang faham \"bangsa\" itu. \"Bangsa\" itu menurut pudjangga ini ada suatu nyawa, suatu asas-akal, yang terjadi dari dua hal: pertama-tama rakyat itu dulunya harus bersama-sama menjalani suatu riwayat; kedua rakyat itu sekarang harus mempunyai kemauan, keinginan hidup menjadi satu. Bukannya jenis (ras), bukannya pula batas-batas negeri yang menjadikan \"bangsa\" itu.",
                     "Nasionalisme itu jalah suatu itikad; suatu keinsyafan rakjat bahwa rakjat itu ada satu golongan, satu \"bangsa\"!",
-                    "Bangsa itu adalah suatu persatuan perangai jang terdjadi dari persatuan hal-ichwal jang telah didjalani oleh rakjat itu.",
-                    "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\" Halaman 335 naskah sarinah"
+                    "Nasionalis yang sejati, yang nasionalismenya itu bukan timbul semata-mata tiruan dari nasionalisme barat akan tetapi timbul dari rasa cinta akan manusia dan kemanusiaan"
+               ]
+            },
+            {
+                "tag": "bangsa",
+                "input": [
+                    "apa itu bangsa",
+                    "bangsa"
+                ],
+                "responses": [
+                    "Bangsa yang besar adalah bangsa yang menghargai jasa pahlawannya.",                    
+                    "Dalam tahun 1882 Ernest Renan telah membuka pendapatnja tentang paham \"bangsa\" itu. \"Bangsa\" itu menurut pudjangga ini ada suatu njawa, suatu azas-akal, jang terdjadi dari dua hal: pertama-tama rakjat itu dulunja harus bersama-sama mendjalani suatu riwayat; kedua rakjat itu sekarang harus mempunjai kemauan, keinginan hidup mendjadi satu. Bukannja djenis (ras), bukannja pula batas-batas negeri jang mendjadikan \"bangsa\" itu.",
+                    "Bangsa itu adalah suatu persatuan perangai yang terjadi dari persatuan hal-ikhwal yang telah dijalani oleh rakyat itu."
+            ]
+            },
+            {
+                "tag": "ideologies",
+                "input": [
+                    "kutipan soekarno tentang ideologi",
+                    "ideologi menurut soekarno",
+                    "pendapat soekarno tentang ideologi"
+                ],
+                "responses": [
+                    "Saya menerima semua ideologi selama ideologi tersebut tidak merusak Indonesia"
                 ]
             },
+
             {
                 "tag": "revolution",
                 "input": [
@@ -86,7 +165,9 @@
                     "revolution quotes"
                 ],
                 "responses": [
-                    "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\" Halaman 335 naskah sarinah"
+                    "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\"",
+                    "Bahwa yang menyebabkan kolonisasi itu bukanlah keinginan pada kemasyhuran, bukan keinginan melihat dunia-asing, bukan keinginan merdeka, dan bukan pula oleh karena negeri rakyat yang menjalankan kolonisasi itu ada terlampau sesak oleh banyaknya penduduk, sebagai yang telah diajarkan oleh Gustav Klemm, akan tetapi asalnya kolonisasi ialah teristimewa soal rezeki."
+
                 ]
             },
             {
@@ -94,12 +175,24 @@
                 "input": [
                     "berikan kutipan tentang independence",
                     "quotes mengenai independence",
-                    "independence quotes"
+                    "independence quotes",
+                    "kemerdekaan",
+                    "merdeka"
+                ],
+                "responses": [                   
+                    "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\"",
+                    "Juga diatas pundak wanitalah terletak kewajiban untuk tidak ketinggalan di dalam perjuangan ini, dalam mana diperjuangkan kemerdekaan mereka dan pembebasan mereka. Mereka sendirilah harus membuktikan, bahwa mereka mengerti benar-benar tempat mereka dalam perjuangan sekarang yang mengejar masa depan yang lebih baik itu\"",
+                    "Kemerdekaan ialah hak segala bangsa, dan oleh sebab itu penjajahan di atas dunia harus dihapuskan, karena tidak sesuai dengan peri kemanusiaan dan peri keadilan."
+                ]
+            },
+            {
+                "tag": "kolonialisme",
+                "input": [
+                    "kutipan soekarno tentang kolonialisme",
+                    "kolonialisme menurut soekarno"
                 ],
                 "responses": [
-                    "Bahwa jang menjebabkan kolonisasi itu bukanlah keinginan pada kemasjhuran, bukan keinginan melihat dunia-asing, bukan keinginan merdeka, dan bukan pula oleh karena negeri rakjat jang mendjalankan kolonisasi itu ada terlampau sesak oleh banjaknja penduduk, sebagai jang telah diadjarkan oleh Gustav Klemm, akan tetapi asalnja kolonisasi ijalah teristimewa soal rezeki.",
-                    "Wanita Indonesia, kewajibanmu telah terang! Sekarang, ikutilah serta mutlak dalam usaha menyelamatkan Republik, dan nanti jika Republik telah selamat, ikutilah serta mutlak dalam usaha menyusun Negara Nasional. Jangan ketinggalan didalam Revolusi Nasional ini dai awal sampai akhirnya, dan jangan ketinggalan pula nanti di dalam usaha menyusun masyarakat keadilan sosial dan kesejahteraan sosial. Didalam masyarakat keadilan sosial dan kesejahteraan sosial telah engkau nanti menjadi wanita yang bahagia, wanita yang Merdeka!\" Halaman 335 naskah sarinah",
-                    "Juga diatas pundak wanitalah terletak kewajiban untuk tidak ketinggalan di dalam perjuangan ini, dalam mana diperjuangkan kemerdekaan mereka dan pembebasan mereka. Mereka sendirilah harus membuktikan, bahwa mereka mengerti benar-benar tempat mereka dalam perjuangan sekarang yang mengejar masa depan yang lebih baik itu\" Halaman 332 Naskah sarinah"
+                    "Yang menyebabkan kolonisasi bukanlah karena keinginan untuk mencari ketenaran, bukan karena ingin melihat dunia asing, bukan karena dorongan untuk merdeka, dan juga bukan karena negeri rakyat yang melakukan kolonisasi itu terlalu padat penduduknya. Tetapi pada dasarnya, kolonisasi terutama berakar pada persoalan mencari penghidupan"
                 ]
             },
             {
@@ -107,10 +200,11 @@
                 "input": [
                     "berikan kutipan tentang unity",
                     "quotes mengenai unity",
-                    "unity quotes"
+                    "unity quotes",
+                    "persatuan"
                 ],
                 "responses": [
-                    "Bangsa itu adalah suatu persatuan perangai jang terdjadi dari persatuan hal-ichwal jang telah didjalani oleh rakjat itu."
+                    "Bangsa itu adalah suatu persatuan perangai yang terjadi dari persatuan hal-ikhwal yang telah dijalani oleh rakyat itu."
                 ]
             },
             {
@@ -121,7 +215,7 @@
                     "international quotes"
                 ],
                 "responses": [
-                    "Bahwa jang menjebabkan kolonisasi itu bukanlah keinginan pada kemasjhuran, bukan keinginan melihat dunia-asing, bukan keinginan merdeka, dan bukan pula oleh karena negeri rakjat jang mendjalankan kolonisasi itu ada terlampau sesak oleh banjaknja penduduk, sebagai jang telah diadjarkan oleh Gustav Klemm, akan tetapi asalnja kolonisasi ijalah teristimewa soal rezeki."
+                    "Yang menyebabkan kolonisasi bukanlah karena keinginan untuk mencari ketenaran, bukan karena ingin melihat dunia asing, bukan karena dorongan untuk merdeka, dan juga bukan karena negeri rakyat yang melakukan kolonisasi itu terlalu padat penduduknya. Tetapi pada dasarnya, kolonisasi terutama berakar pada persoalan mencari penghidupan"
                 ]
             },
             {
@@ -129,11 +223,18 @@
                 "input": [
                     "berikan kutipan tentang struggle",
                     "quotes mengenai struggle",
-                    "struggle quotes"
+                    "struggle quotes",
+                    "perjuangan",
+                    "perjuangan bangsa",
+                    "perjuangan kemerdekaan",
+                    "kesulitan",
+                    "kesulitan bangsa"
                 ],
                 "responses": [
-                    "Juga diatas pundak wanitalah terletak kewajiban untuk tidak ketinggalan di dalam perjuangan ini, dalam mana diperjuangkan kemerdekaan mereka dan pembebasan mereka. Mereka sendirilah harus membuktikan, bahwa mereka mengerti benar-benar tempat mereka dalam perjuangan sekarang yang mengejar masa depan yang lebih baik itu\" Halaman 332 Naskah sarinah",
-                    "Dan kamu, kaum wanita Indonesia,-akhirnya nasibmu adalah di tangan kamu sendiri. Saya memberi peringatan kepada kaum laku-laki itu untuk memberi keyakinan kepada mereka tentang hargamu dalam perjuangan, tetapi kamu sendiri harus menjadi sadar, kamu sendiri harus terjun mutlak dalam perjuangan\" Halaman 326 Naskah sarinah"
+                    "Juga diatas pundak wanitalah terletak kewajiban untuk tidak ketinggalan di dalam perjuangan ini, dalam mana diperjuangkan kemerdekaan mereka dan pembebasan mereka. Mereka sendirilah harus membuktikan, bahwa mereka mengerti benar-benar tempat mereka dalam perjuangan sekarang yang mengejar masa depan yang lebih baik itu\" ",
+                    "Dan kamu, kaum wanita Indonesia,-akhirnya nasibmu adalah di tangan kamu sendiri. Saya memberi peringatan kepada kaum laku-laki itu untuk memberi keyakinan kepada mereka tentang hargamu dalam perjuangan, tetapi kamu sendiri harus menjadi sadar, kamu sendiri harus terjun mutlak dalam perjuangan\" ",
+                     "Belajar tanpa berpikir itu tidak berguna, tetapi berpikir tanpa belajar sangat berbahaya!",
+                     "Perjuanganku lebih mudah karena mengusir penjajah, tapi perjuanganmu akan lebih sulit karena melawan bangsamu sendiri."
                 ]
             }
         ]
