@@ -30,7 +30,8 @@ def display_authors(data):
     authors = list(data.keys())
     print("\n📚 Authors yang tersedia:")
     for i, author in enumerate(authors, 1):
-        print(f"{i}. {author}")
+        intents_count = len(data[author].get('intents', []))
+        print(f"{i}. {author} ({intents_count} tags)")
     return authors
 
 def display_tags(author_data):
@@ -38,7 +39,9 @@ def display_tags(author_data):
     intents = author_data.get("intents", [])
     print(f"\n🏷️  Tags yang tersedia:")
     for i, intent in enumerate(intents, 1):
-        print(f"{i}. {intent['tag']}")
+        input_count = len(intent.get('input', []))
+        response_count = len(intent.get('responses', []))
+        print(f"{i}. {intent['tag']} ({input_count} inputs, {response_count} responses)")
     return intents
 
 def select_author(data):
@@ -178,7 +181,7 @@ def edit_tag_menu(data, author, selected_tag):
     """Edit tag submenu"""
     while True:
         print(f"\n" + "="*50)
-        print(f"✏️  EDITING TAG: {selected_tag['tag']}")
+        print(f"✏️  EDITING TAG: {selected_tag['tag']} [{author}]")
         print("="*50)
         print("1. Add Input")
         print("2. Add Response")
@@ -188,7 +191,7 @@ def edit_tag_menu(data, author, selected_tag):
         print("6. Audit Responses > 150 characters")
         print("7. Back to Main Menu")
         
-        choice = input("\nPilih aksi (1-6): ").strip()
+        choice = input("\nPilih aksi (1-7): ").strip()
         
         if choice == '1':
             add_input_to_tag(data, author, selected_tag)
@@ -467,7 +470,7 @@ def add_response_to_tag(data, author, tag):
             if resp not in tag["responses"]:
                 tag["responses"].append(resp)
                 added_count += 1
-                print(f"✅ Response '{resp[:50]}...' ditambahkan!")
+                print(f"✅ Response ditambahkan!")
             else:
                 print(f"⚠️  Response sudah ada!")
     
@@ -506,7 +509,7 @@ def delete_response_from_tag(data, author, tag):
     
     print(f"\n💬 Responses untuk tag '{tag['tag']}':")
     for i, resp in enumerate(tag["responses"], 1):
-        print(f"{i}. {resp[:100]}...")
+        print(f"{i}. {resp[:100]}{'...' if len(resp) > 100 else ''}")
     
     while True:
         try:
@@ -535,6 +538,390 @@ def view_tag_data(tag):
     for i, resp in enumerate(tag['responses'], 1):
         print(f"  {i}. {resp[:100]}{'...' if len(resp) > 100 else ''}")
 
+def global_audit_responses(data):
+    """Audit semua responses dari semua tags yang melebihi 150 karakter"""
+    print("\n" + "="*50)
+    print("🔍 GLOBAL AUDIT RESPONSES - SEMUA AUTHOR & TAG")
+    print("="*50)
+    
+    all_long_responses = []
+    
+    # Find all responses longer than 150 characters across all authors and tags
+    for author, author_data in data.items():
+        intents = author_data.get('intents', [])
+        for intent in intents:
+            responses = intent.get('responses', [])
+            for i, resp in enumerate(responses):
+                if len(resp) > 150:
+                    all_long_responses.append({
+                        'author': author,
+                        'tag': intent['tag'],
+                        'index': i,
+                        'text': resp,
+                        'length': len(resp)
+                    })
+    
+    if not all_long_responses:
+        print("✅ Tidak ada response yang melebihi 150 karakter di seluruh database!")
+        return
+    
+    # Sort by length (longest first)
+    all_long_responses.sort(key=lambda x: x['length'], reverse=True)
+    
+    print(f"⚠️  Ditemukan {len(all_long_responses)} response yang melebihi 150 karakter:")
+    print("-" * 80)
+    
+    for i, resp_data in enumerate(all_long_responses, 1):
+        print(f"\n{i}. [{resp_data['author']}] Tag: {resp_data['tag']}")
+        print(f"   Response Index: {resp_data['index'] + 1} | Panjang: {resp_data['length']} karakter")
+        print(f"   Preview: {resp_data['text'][:100]}...")
+    
+    print("\n" + "="*80)
+    print("PILIHAN TINDAKAN:")
+    print("1. Edit Response Tertentu")
+    print("2. Edit Responses dari Author Tertentu")
+    print("3. Edit Responses dari Tag Tertentu")
+    print("4. Edit Semua Response Panjang")
+    print("5. Filter dan Tampilkan")
+    print("6. Kembali")
+    
+    choice = input("\nPilih tindakan (1-6): ").strip()
+    
+    if choice == '1':
+        edit_specific_global_response(data, all_long_responses)
+    elif choice == '2':
+        edit_responses_by_author(data, all_long_responses)
+    elif choice == '3':
+        edit_responses_by_tag(data, all_long_responses)
+    elif choice == '4':
+        edit_all_global_responses(data, all_long_responses)
+    elif choice == '5':
+        filter_and_display(all_long_responses)
+    elif choice == '6':
+        return
+    else:
+        print("❌ Pilihan tidak valid!")
+
+def edit_specific_global_response(data, all_long_responses):
+    """Edit response tertentu dari global audit"""
+    print(f"\n📝 EDIT RESPONSE TERTENTU")
+    print("-" * 50)
+    
+    for i, resp_data in enumerate(all_long_responses, 1):
+        print(f"{i}. [{resp_data['author']}] {resp_data['tag']} - Response {resp_data['index'] + 1}")
+        print(f"   ({resp_data['length']} karakter) {resp_data['text'][:60]}...")
+    
+    while True:
+        try:
+            choice = int(input(f"\nPilih response yang akan diedit (1-{len(all_long_responses)}): "))
+            if 1 <= choice <= len(all_long_responses):
+                selected_resp = all_long_responses[choice - 1]
+                
+                # Find the actual tag object in data
+                author = selected_resp['author']
+                tag_name = selected_resp['tag']
+                
+                for intent in data[author]['intents']:
+                    if intent['tag'] == tag_name:
+                        edit_single_response(data, author, intent, selected_resp)
+                        break
+                break
+            else:
+                print("❌ Pilihan tidak valid!")
+        except ValueError:
+            print("❌ Masukkan angka yang valid!")
+
+def edit_responses_by_author(data, all_long_responses):
+    """Edit responses berdasarkan author tertentu"""
+    # Get unique authors with long responses
+    authors_with_long = {}
+    for resp in all_long_responses:
+        author = resp['author']
+        if author not in authors_with_long:
+            authors_with_long[author] = []
+        authors_with_long[author].append(resp)
+    
+    print(f"\n📝 EDIT RESPONSES BY AUTHOR")
+    print("-" * 40)
+    
+    authors = list(authors_with_long.keys())
+    for i, author in enumerate(authors, 1):
+        count = len(authors_with_long[author])
+        print(f"{i}. {author} ({count} responses)")
+    
+    while True:
+        try:
+            choice = int(input(f"\nPilih author (1-{len(authors)}): "))
+            if 1 <= choice <= len(authors):
+                selected_author = authors[choice - 1]
+                author_responses = authors_with_long[selected_author]
+                
+                print(f"\n📋 Responses panjang dari {selected_author}:")
+                for i, resp in enumerate(author_responses, 1):
+                    print(f"{i}. Tag: {resp['tag']} - Response {resp['index'] + 1} ({resp['length']} karakter)")
+                
+                edit_author_responses(data, selected_author, author_responses)
+                break
+            else:
+                print("❌ Pilihan tidak valid!")
+        except ValueError:
+            print("❌ Masukkan angka yang valid!")
+
+def edit_responses_by_tag(data, all_long_responses):
+    """Edit responses berdasarkan tag tertentu"""
+    # Get unique tags with long responses
+    tags_with_long = {}
+    for resp in all_long_responses:
+        tag_key = f"[{resp['author']}] {resp['tag']}"
+        if tag_key not in tags_with_long:
+            tags_with_long[tag_key] = []
+        tags_with_long[tag_key].append(resp)
+    
+    print(f"\n📝 EDIT RESPONSES BY TAG")
+    print("-" * 40)
+    
+    tag_keys = list(tags_with_long.keys())
+    for i, tag_key in enumerate(tag_keys, 1):
+        count = len(tags_with_long[tag_key])
+        print(f"{i}. {tag_key} ({count} responses)")
+    
+    while True:
+        try:
+            choice = int(input(f"\nPilih tag (1-{len(tag_keys)}): "))
+            if 1 <= choice <= len(tag_keys):
+                selected_tag_key = tag_keys[choice - 1]
+                tag_responses = tags_with_long[selected_tag_key]
+                
+                print(f"\n📋 Responses panjang dari {selected_tag_key}:")
+                for i, resp in enumerate(tag_responses, 1):
+                    print(f"{i}. Response {resp['index'] + 1} ({resp['length']} karakter)")
+                    print(f"   {resp['text'][:80]}...")
+                
+                edit_tag_responses(data, tag_responses)
+                break
+            else:
+                print("❌ Pilihan tidak valid!")
+        except ValueError:
+            print("❌ Masukkan angka yang valid!")
+
+def edit_all_global_responses(data, all_long_responses):
+    """Edit semua response panjang secara berurutan"""
+    print(f"\n📝 EDIT SEMUA RESPONSE PANJANG GLOBAL")
+    print("-" * 50)
+    print(f"Total response yang akan diedit: {len(all_long_responses)}")
+    
+    confirm = input("\nLanjutkan mengedit semua response? (y/n): ")
+    if confirm.lower() != 'y':
+        print("❌ Edit dibatalkan!")
+        return
+    
+    edited_count = 0
+    for i, resp_data in enumerate(all_long_responses, 1):
+        print(f"\n{'='*60}")
+        print(f"📝 EDITING RESPONSE {i}/{len(all_long_responses)}")
+        print(f"Author: {resp_data['author']} | Tag: {resp_data['tag']}")
+        print(f"Response Index: {resp_data['index'] + 1} | Panjang: {resp_data['length']} karakter")
+        print("="*60)
+        
+        # Find the actual tag object in data
+        author = resp_data['author']
+        tag_name = resp_data['tag']
+        
+        for intent in data[author]['intents']:
+            if intent['tag'] == tag_name:
+                if edit_single_response(data, author, intent, resp_data):
+                    edited_count += 1
+                break
+        
+        if i < len(all_long_responses):
+            continue_edit = input(f"\nLanjutkan ke response berikutnya? (y/n): ")
+            if continue_edit.lower() != 'y':
+                break
+    
+    print(f"\n✅ Selesai! {edited_count} response berhasil diedit dari {len(all_long_responses)} response.")
+
+def edit_author_responses(data, author, author_responses):
+    """Edit responses dari author tertentu"""
+    print(f"\n📝 EDIT RESPONSES DARI {author}")
+    print("-" * 40)
+    
+    confirm = input(f"Edit {len(author_responses)} responses dari {author}? (y/n): ")
+    if confirm.lower() != 'y':
+        return
+    
+    edited_count = 0
+    for i, resp_data in enumerate(author_responses, 1):
+        print(f"\n{'='*50}")
+        print(f"📝 EDITING RESPONSE {i}/{len(author_responses)}")
+        print(f"Tag: {resp_data['tag']} | Response {resp_data['index'] + 1}")
+        print("="*50)
+        
+        # Find the actual tag object
+        for intent in data[author]['intents']:
+            if intent['tag'] == resp_data['tag']:
+                if edit_single_response(data, author, intent, resp_data):
+                    edited_count += 1
+                break
+        
+        if i < len(author_responses):
+            continue_edit = input(f"\nLanjutkan ke response berikutnya? (y/n): ")
+            if continue_edit.lower() != 'y':
+                break
+    
+    print(f"\n✅ Selesai! {edited_count} response berhasil diedit dari {len(author_responses)} response.")
+
+def edit_tag_responses(data, tag_responses):
+    """Edit responses dari tag tertentu"""
+    if not tag_responses:
+        return
+    
+    first_resp = tag_responses[0]
+    author = first_resp['author']
+    tag_name = first_resp['tag']
+    
+    print(f"\n📝 EDIT RESPONSES DARI TAG: {tag_name}")
+    print("-" * 50)
+    
+    confirm = input(f"Edit {len(tag_responses)} responses dari tag {tag_name}? (y/n): ")
+    if confirm.lower() != 'y':
+        return
+    
+    edited_count = 0
+    for i, resp_data in enumerate(tag_responses, 1):
+        print(f"\n{'='*50}")
+        print(f"📝 EDITING RESPONSE {i}/{len(tag_responses)}")
+        print(f"Response {resp_data['index'] + 1} | {resp_data['length']} karakter")
+        print("="*50)
+        
+        # Find the actual tag object
+        for intent in data[author]['intents']:
+            if intent['tag'] == tag_name:
+                if edit_single_response(data, author, intent, resp_data):
+                    edited_count += 1
+                break
+        
+        if i < len(tag_responses):
+            continue_edit = input(f"\nLanjutkan ke response berikutnya? (y/n): ")
+            if continue_edit.lower() != 'y':
+                break
+    
+    print(f"\n✅ Selesai! {edited_count} response berhasil diedit dari {len(tag_responses)} response.")
+
+def filter_and_display(all_long_responses):
+    """Filter dan tampilkan responses berdasarkan kriteria"""
+    print("\n🔍 FILTER DAN TAMPILKAN")
+    print("-" * 30)
+    print("1. Filter by Author")
+    print("2. Filter by Tag")
+    print("3. Filter by Length Range")
+    print("4. Show All (sorted)")
+    print("5. Kembali")
+    
+    choice = input("\nPilih filter (1-5): ").strip()
+    
+    if choice == '1':
+        filter_by_author(all_long_responses)
+    elif choice == '2':
+        filter_by_tag(all_long_responses)
+    elif choice == '3':
+        filter_by_length(all_long_responses)
+    elif choice == '4':
+        show_all_sorted(all_long_responses)
+    elif choice == '5':
+        return
+    else:
+        print("❌ Pilihan tidak valid!")
+
+def filter_by_author(all_long_responses):
+    """Filter responses by author"""
+    authors = list(set([resp['author'] for resp in all_long_responses]))
+    
+    print(f"\n📚 PILIH AUTHOR:")
+    for i, author in enumerate(authors, 1):
+        count = len([r for r in all_long_responses if r['author'] == author])
+        print(f"{i}. {author} ({count} responses)")
+    
+    try:
+        choice = int(input(f"\nPilih author (1-{len(authors)}): "))
+        if 1 <= choice <= len(authors):
+            selected_author = authors[choice - 1]
+            filtered = [r for r in all_long_responses if r['author'] == selected_author]
+            display_filtered_responses(filtered, f"Author: {selected_author}")
+    except ValueError:
+        print("❌ Input tidak valid!")
+
+def filter_by_tag(all_long_responses):
+    """Filter responses by tag"""
+    tags = list(set([f"[{resp['author']}] {resp['tag']}" for resp in all_long_responses]))
+    
+    print(f"\n🏷️  PILIH TAG:")
+    for i, tag in enumerate(tags, 1):
+        tag_parts = tag.replace('[', '').split('] ')
+        author = tag_parts[0]
+        tag_name = tag_parts[1]
+        count = len([r for r in all_long_responses if r['author'] == author and r['tag'] == tag_name])
+        print(f"{i}. {tag} ({count} responses)")
+    
+    try:
+        choice = int(input(f"\nPilih tag (1-{len(tags)}): "))
+        if 1 <= choice <= len(tags):
+            selected_tag = tags[choice - 1]
+            tag_parts = selected_tag.replace('[', '').split('] ')
+            author = tag_parts[0]
+            tag_name = tag_parts[1]
+            filtered = [r for r in all_long_responses if r['author'] == author and r['tag'] == tag_name]
+            display_filtered_responses(filtered, f"Tag: {selected_tag}")
+    except ValueError:
+        print("❌ Input tidak valid!")
+
+def filter_by_length(all_long_responses):
+    """Filter responses by length range"""
+    print(f"\n📏 FILTER BY LENGTH")
+    try:
+        min_length = int(input("Panjang minimum (default 150): ") or "150")
+        max_length = int(input("Panjang maximum (default 1000): ") or "1000")
+        
+        filtered = [r for r in all_long_responses if min_length <= r['length'] <= max_length]
+        display_filtered_responses(filtered, f"Length: {min_length}-{max_length} karakter")
+    except ValueError:
+        print("❌ Input tidak valid!")
+
+def show_all_sorted(all_long_responses):
+    """Show all responses sorted by different criteria"""
+    print(f"\n📊 SORT BY:")
+    print("1. Length (terpanjang dulu)")
+    print("2. Length (terpendek dulu)")
+    print("3. Author (A-Z)")
+    print("4. Tag (A-Z)")
+    
+    choice = input("\nPilih sorting (1-4): ").strip()
+    
+    if choice == '1':
+        sorted_responses = sorted(all_long_responses, key=lambda x: x['length'], reverse=True)
+        display_filtered_responses(sorted_responses, "Sorted by Length (Desc)")
+    elif choice == '2':
+        sorted_responses = sorted(all_long_responses, key=lambda x: x['length'])
+        display_filtered_responses(sorted_responses, "Sorted by Length (Asc)")
+    elif choice == '3':
+        sorted_responses = sorted(all_long_responses, key=lambda x: x['author'])
+        display_filtered_responses(sorted_responses, "Sorted by Author")
+    elif choice == '4':
+        sorted_responses = sorted(all_long_responses, key=lambda x: (x['author'], x['tag']))
+        display_filtered_responses(sorted_responses, "Sorted by Tag")
+    else:
+        print("❌ Pilihan tidak valid!")
+
+def display_filtered_responses(responses, filter_title):
+    """Display filtered responses"""
+    print(f"\n📋 HASIL FILTER: {filter_title}")
+    print(f"Total: {len(responses)} responses")
+    print("-" * 60)
+    
+    for i, resp in enumerate(responses, 1):
+        print(f"\n{i}. [{resp['author']}] {resp['tag']} - Response {resp['index'] + 1}")
+        print(f"   Panjang: {resp['length']} karakter")
+        print(f"   Preview: {resp['text'][:80]}...")
+
 def main_menu():
     """Main application menu"""
     print("\n" + "="*50)
@@ -544,7 +931,8 @@ def main_menu():
     print("2. Delete a Tag")
     print("3. Edit Tag")
     print("4. View All Data")
-    print("5. Exit")
+    print("5. Global Audit Responses > 150 characters")
+    print("6. Exit")
 
 def view_all_data(data):
     """View all data in the JSON"""
@@ -557,11 +945,12 @@ def view_all_data(data):
         intents = author_data.get('intents', [])
         print(f"   Total tags: {len(intents)}")
         for intent in intents:
-            print(f"   - {intent['tag']} ({len(intent['input'])} inputs, {len(intent['responses'])} responses)")
+            print(f"   - {intent['tag']} ({len(intent.get('input', []))} inputs, {len(intent.get('responses', []))} responses)")
 
 def main():
     """Main application loop"""
     print("🎯 Selamat datang di Chatbot Tag Manager!")
+    print("📁 File: content_by_author_and_tags.json")
     
     while True:
         data = load_data()
@@ -570,7 +959,7 @@ def main():
             break
         
         main_menu()
-        choice = input("\nPilih menu (1-5): ").strip()
+        choice = input("\nPilih menu (1-6): ").strip()
         
         if choice == '1':
             add_tag(data)
@@ -581,6 +970,8 @@ def main():
         elif choice == '4':
             view_all_data(data)
         elif choice == '5':
+            global_audit_responses(data)
+        elif choice == '6':
             print("👋 Terima kasih telah menggunakan Tag Manager!")
             break
         else:
