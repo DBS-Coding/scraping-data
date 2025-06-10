@@ -4,7 +4,7 @@ import time
 
 # Load data from JSON file
 def load_data():
-    with open(r"c:\PythonVSCenv\Capstone\scrapping\content_by_author_and_tags.json", 'r', encoding='utf-8') as f:
+    with open(r"c:\PythonVSCenv\Capstone\scrapping\output\content_by_author_and_tags.json", 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def send_tag_to_api(tag_data, author_name):
@@ -50,6 +50,460 @@ def send_tag_to_api(tag_data, author_name):
     except Exception as e:
         print(f"   ❌ ERROR: {e}")
         return False
+
+def get_all_tags_from_api():
+    """Get all tags from API to see what's available"""
+    url = "https://capstone-five-dusky.vercel.app/chatbot/tags"
+    
+    try:
+        print("📋 Fetching all tags from API...")
+        response = requests.get(url, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            
+            # Handle different response structures
+            if 'data' in data:
+                tags = data['data']
+            elif isinstance(data, list):
+                tags = data
+            else:
+                tags = [data]
+            
+            print(f"✅ Found {len(tags)} tags in API")
+            return tags
+        else:
+            print(f"❌ Failed to fetch tags: {response.status_code}")
+            print(f"Response: {response.text[:200]}")
+            return []
+            
+    except Exception as e:
+        print(f"❌ Error fetching tags: {e}")
+        return []
+
+def delete_tag_from_api(tag_id=None, tag_name=None, author_name=None):
+    """Delete tag from API"""
+    # Multiple possible delete endpoints
+    possible_endpoints = [
+        f"https://capstone-five-dusky.vercel.app/chatbot/tags/{tag_id}" if tag_id else None,
+        f"https://capstone-five-dusky.vercel.app/chatbot/tags/delete",
+        f"https://capstone-five-dusky.vercel.app/chatbot/tags",
+    ]
+    
+    # Filter out None values
+    possible_endpoints = [url for url in possible_endpoints if url]
+    
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    }
+    
+    # Payload for delete (if needed)
+    delete_payload = {}
+    if tag_name and author_name:
+        delete_payload = {
+            "tag": tag_name,
+            "nama": author_name
+        }
+    
+    print(f"🗑️  Deleting tag: {tag_name} by {author_name}")
+    
+    for i, url in enumerate(possible_endpoints, 1):
+        try:
+            print(f"  Attempt {i}: {url}")
+            
+            # Try DELETE method first
+            if tag_id and i == 1:
+                response = requests.delete(url, headers=headers, timeout=10)
+                print(f"    Method: DELETE")
+            else:
+                # Try POST with delete payload
+                response = requests.post(url, json=delete_payload, headers=headers, timeout=10)
+                print(f"    Method: POST with delete payload")
+            
+            print(f"    Response Status: {response.status_code}")
+            
+            if response.status_code in [200, 201, 204]:
+                print(f"    ✅ SUCCESS! Deleted {tag_name}")
+                return True
+            else:
+                print(f"    ❌ Failed: {response.status_code}")
+                print(f"    Response: {response.text[:100]}")
+                
+        except Exception as e:
+            print(f"    ❌ Error: {e}")
+    
+    return False
+
+def update_tag_in_api(tag_id=None, tag_name=None, author_name=None, updated_data=None):
+    """Update tag in API (for removing specific inputs/responses)"""
+    possible_endpoints = [
+        f"https://capstone-five-dusky.vercel.app/chatbot/tags/{tag_id}" if tag_id else None,
+        f"https://capstone-five-dusky.vercel.app/chatbot/tags/update",
+        f"https://capstone-five-dusky.vercel.app/chatbot/tags",
+    ]
+    
+    # Filter out None values
+    possible_endpoints = [url for url in possible_endpoints if url]
+    
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    }
+    
+    print(f"🔄 Updating tag: {tag_name} by {author_name}")
+    
+    for i, url in enumerate(possible_endpoints, 1):
+        try:
+            print(f"  Attempt {i}: {url}")
+            
+            # Try PUT method first, then POST
+            if i == 1 and tag_id:
+                response = requests.put(url, json=updated_data, headers=headers, timeout=10)
+                print(f"    Method: PUT")
+            else:
+                response = requests.post(url, json=updated_data, headers=headers, timeout=10)
+                print(f"    Method: POST")
+            
+            print(f"    Response Status: {response.status_code}")
+            
+            if response.status_code in [200, 201]:
+                print(f"    ✅ SUCCESS! Updated {tag_name}")
+                return True
+            else:
+                print(f"    ❌ Failed: {response.status_code}")
+                print(f"    Response: {response.text[:100]}")
+                
+        except Exception as e:
+            print(f"    ❌ Error: {e}")
+    
+    return False
+
+def delete_specific_tag():
+    """Delete specific tag from API"""
+    print("🗑️  DELETE SPECIFIC TAG FROM API")
+    print("="*50)
+    
+    # Get tags from API
+    api_tags = get_all_tags_from_api()
+    
+    if not api_tags:
+        print("❌ No tags found in API or failed to fetch!")
+        return
+    
+    # Display available tags
+    print("\n📋 Available tags in API:")
+    for i, tag in enumerate(api_tags, 1):
+        tag_name = tag.get('tag', 'Unknown')
+        author_name = tag.get('nama', 'Unknown')
+        input_count = len(tag.get('input', []))
+        response_count = len(tag.get('responses', []))
+        print(f"{i}. {tag_name} by {author_name} ({input_count} inputs, {response_count} responses)")
+    
+    try:
+        choice = int(input(f"\nPilih tag untuk dihapus (1-{len(api_tags)}): "))
+        if 1 <= choice <= len(api_tags):
+            selected_tag = api_tags[choice - 1]
+            tag_name = selected_tag.get('tag', 'Unknown')
+            author_name = selected_tag.get('nama', 'Unknown')
+            tag_id = selected_tag.get('id')
+            
+            print(f"\n⚠️  You are about to delete:")
+            print(f"   Tag: {tag_name}")
+            print(f"   Author: {author_name}")
+            print(f"   Inputs: {len(selected_tag.get('input', []))}")
+            print(f"   Responses: {len(selected_tag.get('responses', []))}")
+            if tag_id:
+                print(f"   ID: {tag_id}")
+            
+            confirm = input("\nAre you sure? (y/n): ")
+            if confirm.lower() == 'y':
+                if delete_tag_from_api(tag_id, tag_name, author_name):
+                    print("🎉 Tag deleted successfully!")
+                else:
+                    print("❌ Failed to delete tag!")
+            else:
+                print("❌ Deletion cancelled!")
+        else:
+            print("❌ Invalid choice!")
+    except ValueError:
+        print("❌ Please enter a valid number!")
+
+def delete_by_author():
+    """Delete all tags from specific author"""
+    print("🗑️  DELETE ALL TAGS BY AUTHOR")
+    print("="*50)
+    
+    # Get tags from API
+    api_tags = get_all_tags_from_api()
+    
+    if not api_tags:
+        print("❌ No tags found in API!")
+        return
+    
+    # Group by author
+    authors = {}
+    for tag in api_tags:
+        author = tag.get('nama', 'Unknown')
+        if author not in authors:
+            authors[author] = []
+        authors[author].append(tag)
+    
+    # Display authors
+    print("\n📚 Available authors:")
+    author_list = list(authors.keys())
+    for i, author in enumerate(author_list, 1):
+        tag_count = len(authors[author])
+        print(f"{i}. {author} ({tag_count} tags)")
+    
+    try:
+        choice = int(input(f"\nPilih author untuk dihapus semua tagnya (1-{len(author_list)}): "))
+        if 1 <= choice <= len(author_list):
+            selected_author = author_list[choice - 1]
+            tags_to_delete = authors[selected_author]
+            
+            print(f"\n⚠️  You are about to delete {len(tags_to_delete)} tags from {selected_author}:")
+            for tag in tags_to_delete:
+                print(f"   - {tag.get('tag', 'Unknown')}")
+            
+            confirm = input(f"\nDelete all {len(tags_to_delete)} tags? (y/n): ")
+            if confirm.lower() == 'y':
+                success_count = 0
+                for tag in tags_to_delete:
+                    tag_name = tag.get('tag', 'Unknown')
+                    tag_id = tag.get('id')
+                    
+                    if delete_tag_from_api(tag_id, tag_name, selected_author):
+                        success_count += 1
+                    
+                    time.sleep(1)  # Delay between deletions
+                
+                print(f"\n✅ Deleted {success_count}/{len(tags_to_delete)} tags")
+            else:
+                print("❌ Deletion cancelled!")
+        else:
+            print("❌ Invalid choice!")
+    except ValueError:
+        print("❌ Please enter a valid number!")
+
+def delete_specific_inputs_responses():
+    """Delete specific inputs or responses from a tag"""
+    print("🗑️  DELETE SPECIFIC INPUTS/RESPONSES")
+    print("="*50)
+    
+    # Get tags from API
+    api_tags = get_all_tags_from_api()
+    
+    if not api_tags:
+        print("❌ No tags found in API!")
+        return
+    
+    # Display available tags
+    print("\n📋 Available tags:")
+    for i, tag in enumerate(api_tags, 1):
+        tag_name = tag.get('tag', 'Unknown')
+        author_name = tag.get('nama', 'Unknown')
+        input_count = len(tag.get('input', []))
+        response_count = len(tag.get('responses', []))
+        print(f"{i}. {tag_name} by {author_name} ({input_count} inputs, {response_count} responses)")
+    
+    try:
+        choice = int(input(f"\nPilih tag untuk diedit (1-{len(api_tags)}): "))
+        if 1 <= choice <= len(api_tags):
+            selected_tag = api_tags[choice - 1]
+            edit_tag_inputs_responses(selected_tag)
+        else:
+            print("❌ Invalid choice!")
+    except ValueError:
+        print("❌ Please enter a valid number!")
+
+def edit_tag_inputs_responses(tag):
+    """Edit inputs and responses of a specific tag"""
+    tag_name = tag.get('tag', 'Unknown')
+    author_name = tag.get('nama', 'Unknown')
+    tag_id = tag.get('id')
+    
+    while True:
+        print(f"\n" + "="*60)
+        print(f"✏️  EDITING TAG: {tag_name} by {author_name}")
+        print("="*60)
+        
+        current_inputs = tag.get('input', [])
+        current_responses = tag.get('responses', [])
+        
+        print(f"📝 Current Inputs ({len(current_inputs)}):")
+        for i, inp in enumerate(current_inputs, 1):
+            print(f"  {i}. {inp}")
+        
+        print(f"\n💬 Current Responses ({len(current_responses)}):")
+        for i, resp in enumerate(current_responses, 1):
+            print(f"  {i}. {resp[:80]}{'...' if len(resp) > 80 else ''}")
+        
+        print("\n" + "="*60)
+        print("PILIHAN:")
+        print("1. Delete Specific Input")
+        print("2. Delete Specific Response")
+        print("3. Delete Multiple Inputs")
+        print("4. Delete Multiple Responses")
+        print("5. Save Changes to API")
+        print("6. Back to Main Menu")
+        
+        choice = input("\nPilih aksi (1-6): ").strip()
+        
+        if choice == '1':
+            delete_specific_input(tag)
+        elif choice == '2':
+            delete_specific_response(tag)
+        elif choice == '3':
+            delete_multiple_inputs(tag)
+        elif choice == '4':
+            delete_multiple_responses(tag)
+        elif choice == '5':
+            save_tag_changes(tag)
+        elif choice == '6':
+            break
+        else:
+            print("❌ Pilihan tidak valid!")
+
+def delete_specific_input(tag):
+    """Delete specific input from tag"""
+    inputs = tag.get('input', [])
+    
+    if not inputs:
+        print("❌ No inputs to delete!")
+        return
+    
+    print("\n📝 Select input to delete:")
+    for i, inp in enumerate(inputs, 1):
+        print(f"{i}. {inp}")
+    
+    try:
+        choice = int(input(f"\nPilih input untuk dihapus (1-{len(inputs)}): "))
+        if 1 <= choice <= len(inputs):
+            deleted_input = inputs.pop(choice - 1)
+            print(f"✅ Deleted input: {deleted_input}")
+        else:
+            print("❌ Invalid choice!")
+    except ValueError:
+        print("❌ Please enter a valid number!")
+
+def delete_specific_response(tag):
+    """Delete specific response from tag"""
+    responses = tag.get('responses', [])
+    
+    if not responses:
+        print("❌ No responses to delete!")
+        return
+    
+    print("\n💬 Select response to delete:")
+    for i, resp in enumerate(responses, 1):
+        print(f"{i}. {resp[:100]}{'...' if len(resp) > 100 else ''}")
+    
+    try:
+        choice = int(input(f"\nPilih response untuk dihapus (1-{len(responses)}): "))
+        if 1 <= choice <= len(responses):
+            deleted_response = responses.pop(choice - 1)
+            print(f"✅ Deleted response: {deleted_response[:50]}...")
+        else:
+            print("❌ Invalid choice!")
+    except ValueError:
+        print("❌ Please enter a valid number!")
+
+def delete_multiple_inputs(tag):
+    """Delete multiple inputs from tag"""
+    inputs = tag.get('input', [])
+    
+    if not inputs:
+        print("❌ No inputs to delete!")
+        return
+    
+    print("\n📝 Select inputs to delete (comma-separated numbers):")
+    for i, inp in enumerate(inputs, 1):
+        print(f"{i}. {inp}")
+    
+    try:
+        selections = input("\nEnter input numbers (e.g., 1,3,5): ").strip()
+        if not selections:
+            print("❌ No selection made!")
+            return
+        
+        indices = [int(x.strip()) - 1 for x in selections.split(',')]
+        indices.sort(reverse=True)  # Sort in reverse to avoid index issues
+        
+        deleted_count = 0
+        for idx in indices:
+            if 0 <= idx < len(inputs):
+                deleted_input = inputs.pop(idx)
+                deleted_count += 1
+                print(f"✅ Deleted: {deleted_input}")
+            else:
+                print(f"⚠️  Invalid index: {idx + 1}")
+        
+        print(f"✅ Total deleted: {deleted_count} inputs")
+        
+    except ValueError:
+        print("❌ Invalid input format!")
+
+def delete_multiple_responses(tag):
+    """Delete multiple responses from tag"""
+    responses = tag.get('responses', [])
+    
+    if not responses:
+        print("❌ No responses to delete!")
+        return
+    
+    print("\n💬 Select responses to delete (comma-separated numbers):")
+    for i, resp in enumerate(responses, 1):
+        print(f"{i}. {resp[:80]}{'...' if len(resp) > 80 else ''}")
+    
+    try:
+        selections = input("\nEnter response numbers (e.g., 1,3,5): ").strip()
+        if not selections:
+            print("❌ No selection made!")
+            return
+        
+        indices = [int(x.strip()) - 1 for x in selections.split(',')]
+        indices.sort(reverse=True)  # Sort in reverse to avoid index issues
+        
+        deleted_count = 0
+        for idx in indices:
+            if 0 <= idx < len(responses):
+                deleted_response = responses.pop(idx)
+                deleted_count += 1
+                print(f"✅ Deleted: {deleted_response[:50]}...")
+            else:
+                print(f"⚠️  Invalid index: {idx + 1}")
+        
+        print(f"✅ Total deleted: {deleted_count} responses")
+        
+    except ValueError:
+        print("❌ Invalid input format!")
+
+def save_tag_changes(tag):
+    """Save tag changes back to API"""
+    tag_name = tag.get('tag', 'Unknown')
+    author_name = tag.get('nama', 'Unknown')
+    tag_id = tag.get('id')
+    
+    print(f"\n💾 Saving changes for tag: {tag_name}")
+    print(f"   Inputs: {len(tag.get('input', []))}")
+    print(f"   Responses: {len(tag.get('responses', []))}")
+    
+    confirm = input("\nSave changes to API? (y/n): ")
+    if confirm.lower() == 'y':
+        updated_data = {
+            "tag": tag_name,
+            "nama": author_name,
+            "input": tag.get('input', []),
+            "responses": tag.get('responses', [])
+        }
+        
+        if update_tag_in_api(tag_id, tag_name, author_name, updated_data):
+            print("🎉 Changes saved successfully!")
+        else:
+            print("❌ Failed to save changes!")
+    else:
+        print("❌ Changes not saved!")
 
 def test_single_request():
     """Test dengan single request untuk debugging"""
@@ -309,19 +763,28 @@ def main_menu():
     """Main menu untuk push data"""
     while True:
         print("\n" + "="*60)
-        print("🚀 PUSH DATA TO API - CHATBOT TAGS")
+        print("🚀 CHATBOT TAGS MANAGER - API OPERATIONS")
         print("="*60)
         print("🌐 Target: https://capstone-five-dusky.vercel.app/chatbot/tags")
         print("="*60)
+        print("📤 PUSH DATA:")
         print("1. Push All Data (Semua author & tag)")
         print("2. Push by Author (Pilih author tertentu)")
         print("3. Push Specific Tag (Pilih tag tertentu)")
+        print()
+        print("🔧 UTILITIES:")
         print("4. Preview Data (Lihat data yang akan dikirim)")
         print("5. Test Single Request (Debug)")
         print("6. Check Endpoint Connectivity")
-        print("7. Exit")
+        print("7. View All Tags in API")
         
-        choice = input("\nPilih menu (1-7): ").strip()
+        print("🗑️  DELETE/EDIT DATA:")
+        print("8. Delete Specific Tag")
+        print("9. Delete All Tags by Author")
+        print("10. Delete/Edit Inputs & Responses")
+        print("11. Exit")
+        
+        choice = input("\nPilih menu (1-11): ").strip()
         
         if choice == '1':
             confirm = input("⚠️  Push semua data? This will send ALL tags to API (y/n): ")
@@ -346,13 +809,33 @@ def main_menu():
             check_endpoint_connectivity()
             
         elif choice == '7':
+            api_tags = get_all_tags_from_api()
+            if api_tags:
+                print(f"\n📋 Found {len(api_tags)} tags in API:")
+                for i, tag in enumerate(api_tags, 1):
+                    tag_name = tag.get('tag', 'Unknown')
+                    author_name = tag.get('nama', 'Unknown')
+                    input_count = len(tag.get('input', []))
+                    response_count = len(tag.get('responses', []))
+                    print(f"{i}. {tag_name} by {author_name} ({input_count} inputs, {response_count} responses)")
+            
+        elif choice == '8':
+            delete_specific_tag()
+            
+        elif choice == '9':
+            delete_by_author()
+            
+        elif choice == '10':
+            delete_specific_inputs_responses()
+            
+        elif choice == '11':
             print("👋 Goodbye!")
             break
             
         else:
             print("❌ Invalid choice!")
         
-        if choice in ['1', '2', '3', '5', '6']:
+        if choice in ['1', '2', '3', '5', '6', '7', '8', '9', '10']:
             input("\nPress Enter to continue...")
 
 if __name__ == "__main__":
